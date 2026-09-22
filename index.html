@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DripDepot — curated streetwear and fashion.">
+  <title>DripDepot — Streetwear</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#" class="logo">DRIP<span>DEPOT</span></a>
+
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#brands">Brands</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="cart-button" id="openCart">
+      Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">THE NEW STREETWEAR DESTINATION</p>
+      <h1>WEAR YOUR<br><span>DRIP.</span></h1>
+      <p class="hero-text">
+        Curated streetwear. Iconic pieces. One destination.
+      </p>
+      <a href="#shop" class="hero-button">SHOP THE DROP →</a>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="brands-section" id="brands">
+    <p class="eyebrow">SHOP BY BRAND</p>
+
+    <div class="brand-list">
+      <button data-brand="All">ALL</button>
+      <button data-brand="Essentials">ESSENTIALS</button>
+      <button data-brand="SP5DER">SP5DER</button>
+      <button data-brand="BAPE">BAPE</button>
+      <button data-brand="ALO">ALO</button>
+      <button data-brand="Hellstar">HELLSTAR</button>
+      <button data-brand="Supreme">SUPREME</button>
+      <button data-brand="Denim Tears">DENIM TEARS</button>
+      <button data-brand="Gallery Dept.">GALLERY DEPT.</button>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <main id="shop">
+
+    <section class="shop-header">
+      <div>
+        <p class="eyebrow">THE COLLECTION</p>
+        <h2>Latest Pieces</h2>
+      </div>
+
+      <div class="shop-controls">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search products..."
+        >
+
+        <select id="categoryFilter">
+          <option value="All">All categories</option>
+          <option value="Tees">Tees</option>
+          <option value="Hoodies">Hoodies</option>
+          <option value="Pants">Pants</option>
+          <option value="Shorts">Shorts</option>
+          <option value="Crewnecks">Crewnecks</option>
+          <option value="Beanies">Beanies</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="product-grid" id="productGrid"></section>
+
+  </main>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div>
+      <p class="eyebrow">ABOUT DRIPDEPOT</p>
+      <h2>BUILT AROUND<br>THE CULTURE.</h2>
+    </div>
+
+    <p>
+      DripDepot is a streetwear marketplace focused on bringing together
+      standout pieces from some of the biggest names in fashion.
+      <br><br>
+      Find your next piece. Build your rotation. Wear it your way.
+    </p>
+  </section>
+
+  <!-- CART OVERLAY -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- CART -->
+  <aside class="cart" id="cart">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+
+      <button class="checkout-button" id="checkoutButton">
+        CHECKOUT →
+      </button>
+
+      <p class="checkout-note">
+        Checkout is currently a demo. Connect a payment provider before accepting real orders.
+      </p>
+    </div>
+  </aside>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="product-modal">
+
+      <button class="modal-close" id="closeModal">×</button>
+
+      <div class="modal-image" id="modalImage">
+        IMAGE COMING SOON
+      </div>
+
+      <div class="modal-info">
+        <p class="modal-brand" id="modalBrand"></p>
+        <h2 id="modalName"></h2>
+        <p class="modal-price" id="modalPrice"></p>
+
+        <p class="modal-description">
+          Authenticity and product details should be verified before listing
+          an item for sale.
+        </p>
+
+        <label for="sizeSelect">SIZE</label>
+
+        <select id="sizeSelect">
+          <option value="S">Small</option>
+          <option value="M" selected>Medium</option>
+          <option value="L">Large</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+
+        <button class="add-modal-button" id="modalAdd">
+          ADD TO CART
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="logo">DRIP<span>DEPOT</span></div>
+    <p>© 2026 DripDepot. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
